@@ -1,0 +1,104 @@
+% Define document as an article on A4 paper
+\documentclass[a4paper]{article}
+
+% Define paper size and margins
+\usepackage[
+    a4paper,
+    total={6in, 8in},
+    margin=1in
+]{geometry}
+
+% Input and output encodint for UTF-8 characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Allow to use subfiles
+\usepackage{subfiles}
+
+% Allow to enumerate with redefinable labels
+\usepackage{enumerate}
+
+% Translation of some language specific commands (e.g. Abstract)
+\usepackage[portuguese]{babel}
+
+% Create bibliography
+% \usepackage[
+%     backend=biber,
+%     style=numeric,
+%     sorting=none
+% ]{biblatex}
+% \addbibresource{./bibliography/bibliography.bib}
+
+% PDF metadata and allow hyperlinks
+\usepackage[
+    pdftex,
+    pdfauthor={Name Surname},
+    pdftitle={The Title},
+    pdfsubject={The Subject},
+    pdfkeywords={Some Keywords},
+    pdfproducer={LaTeX},
+    pdfcreator={pdfLaTeX}
+]{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,      
+%     urlcolor=cyan,
+%     baseurl={}
+% }
+\urlstyle{same}
+
+% Allow to include graphics
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+% Use floats to contain objects in same page
+\usepackage{float}
+
+% Add fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\lhead{Nome do Trabalho}
+% \chead{}
+% \rhead{}
+% \lfoot{}
+\cfoot{\thepage}
+% \rfoot{}
+
+% Allow multicolumn text
+% \usepackage{multicol}
+
+% Create code block with code highlighting
+% \usepackage{minted}
+% \usepackage{listings}
+
+% Change abstract font size
+% \usepackage{abstract}
+% \renewcommand{\abstractnamefont}{\Large\bfseries}
+% \renewcommand{\abstracttextfont}{\large}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Title page
+\subfile{./sections/00_title}
+
+% Table of contents
+% \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{./sections/01_introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bibliography
+% \printbibliography
+
+% List of figures
+% \listoffigures
+
+\end{document}
