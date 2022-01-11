@@ -93,7 +93,7 @@
 \subfile{./sections/00_title}
 
 % Table of contents
-% \tableofcontents
+% \tableofcontents \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -101,10 +101,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Bibliography
-% \printbibliography
+\clearpage
+
+% List of tables
+% \phantomsection \addcontentsline{toc}{section}{\listtablename} \listoftables \clearpage
 
 % List of figures
-% \listoffigures
+% \phantomsection \addcontentsline{toc}{section}{\listfigurename} \listoffigures \clearpage
+
+% Bibliography
+% \phantomsection \addcontentsline{toc}{section}{\bibname} \printbibliography \clearpage
 
 \end{document}
