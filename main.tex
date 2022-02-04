@@ -54,6 +54,13 @@
 % Use floats to contain objects in same page
 \usepackage{float}
 
+% Allows tabulars with adjustable-width columns
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
 % Add fancy headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -76,6 +83,9 @@
 % Create code block with code highlighting
 \usepackage{minted}
 \usepackage{listings}
+
+% Helper for appendix creation and formatting
+\usepackage{appendix}
 
 % Change abstract font size
 \usepackage{abstract}
@@ -103,13 +113,19 @@
 
 \clearpage
 
+% Bibliography
+% \phantomsection \addcontentsline{toc}{section}{\bibname} \printbibliography \clearpage
+
 % List of tables
 % \phantomsection \addcontentsline{toc}{section}{\listtablename} \listoftables \clearpage
 
 % List of figures
 % \phantomsection \addcontentsline{toc}{section}{\listfigurename} \listoffigures \clearpage
 
-% Bibliography
-% \phantomsection \addcontentsline{toc}{section}{\bibname} \printbibliography \clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Appendix
+\appendix
+% \subfile{./appendix/00_appendix}
 
 \end{document}
