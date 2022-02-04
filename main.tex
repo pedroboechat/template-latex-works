@@ -54,6 +54,13 @@
 % Use floats to contain objects in same page
 \usepackage{float}
 
+% Allows tabulars with adjustable-width columns
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
 % Add fancy headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
