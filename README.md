@@ -43,6 +43,10 @@ The `./sections` folder is where to put the .tex files containing the sections o
 
   ​	Defines macros for mathematical symbols ([more info](http://milde.users.sourceforge.net/LUCR/Math/mathpackages/amssymb-symbols.pdf)).
 
+- [appendix](https://ctan.org/pkg/appendix)
+
+  ​	Allows extra control of appendices.
+
 - [babel](https://ctan.org/pkg/babel)
 
   ​	Manages culturally-determined typographical rules for a wide range of languages.
@@ -107,6 +111,10 @@ The `./sections` folder is where to put the .tex files containing the sections o
 
   ​	Handles multi-file projects and improves importing of files.
 
+- [tabularx](https://ctan.org/pkg/tabularx)
+
+  ​	Allows to create tabulars with adjustable-width columns.
+
 - [titling](https://www.ctan.org/pkg/titling)
 
   ​	Control over the typesetting of titling commands.
@@ -130,11 +138,12 @@ The `./sections` folder is where to put the .tex files containing the sections o
   - At [line 29](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L29), there is the definition of `biblatex`'s bibliography and citation configuration.
   - At [line 37](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L37), there is the PDF metadata definition with `hyperref` package.
   - At [line 49](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L49), there is the definition of `\graphicspath` folder, which will be used as a "base path" for including graphics.
-  - At [lines 62 to 67](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L62-L67), there is the definition of the elements implemented with `fancyhdr` package. You can edit the pages header (`head`) and footer (`foot`) elements placed at the left (`l`), center (`c`) and right (`r`). By default, the left header element (`lhead`) has the project title and the central footer element (`cfoot`) has the page number.
-  - At [lines 82 and 83](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L82-L83), there is the overwriting of abstract's element font sizes.
-  - At [line 93](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L93), there is the import of the title page from `00_title.tex` file.
-  - At [line 96](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L96), there is creation of the table of contents by calling the `\tableofcontents` command.
-  - Between [lines 98 and 102](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L98-L102) comments, there is a place reserved for importing subfiles (e.g. `01_introduction.tex` sample section file).
-  - At [line 107](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L107), there is creation of the list of tables by calling the `\listoftables` command, along with commands to add it to the table of contents.
-  - At [line 110](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L110), there is creation of the list of figures by calling the `\listoffigures` command, along with commands to add it to the table of contents.
-  - At [line 113](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L113), there is creation of the bibliography by calling the `\printbibliography` command, along with commands to add it to the table of contents.
+  - At [lines 59 to 62](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L59-L62), there is the definition of `tabularx` column alignments for the `X` column type.
+  - At [lines 69 to 74](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L69-L74), there is the definition of the elements implemented with `fancyhdr` package. You can edit the pages header (`head`) and footer (`foot`) elements placed at the left (`l`), center (`c`) and right (`r`). By default, the left header element (`lhead`) has the project title and the central footer element (`cfoot`) has the page number.
+  - At [lines 92 and 93](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L92-L93), there is the overwriting of abstract's element font sizes.
+  - At [line 103](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L103), there is the import of the title page from `00_title.tex` file.
+  - At [line 106](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L106), there is creation of the table of contents by calling the `\tableofcontents` command.
+  - Between [lines 108 and 112](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L98-L102) comments, there is a place reserved for importing subfiles (e.g. `01_introduction.tex` sample section file).
+  - At [line 117](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L117), there is creation of the bibliography by calling the `\printbibliography` command, along with commands to add it to the table of contents.
+  - At [line 120](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L120), there is creation of the list of tables by calling the `\listoftables` command, along with commands to add it to the table of contents.
+  - At [line 123](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L123), there is creation of the list of figures by calling the `\listoffigures` command, along with commands to add it to the table of contents.
