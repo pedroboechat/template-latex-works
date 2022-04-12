@@ -55,6 +55,10 @@ The `./sections` folder is where to put the .tex files containing the sections o
 
   ​	Bibliography system for adding citations and references.
 
+- [caption](https://www.ctan.org/pkg/caption)
+
+  ​	Allows extra control of captions.
+
 - [csquotes](https://www.ctan.org/pkg/csquotes)
 
   ​	Provides advanced facilities for inline and display quotations.
@@ -86,6 +90,10 @@ The `./sections` folder is where to put the .tex files containing the sections o
 - [hyperref](https://ctan.org/pkg/hyperref)
 
   ​	Used to produce hypertext links in the document.
+
+- [indentfirst](https://ctan.org/pkg/indentfirst)
+
+  ​	Indents first paragraph after section header.
 
 - [inputenc](https://ctan.org/pkg/inputenc)
 
@@ -123,27 +131,28 @@ The `./sections` folder is where to put the .tex files containing the sections o
 
 - Title page (`00_title.tex`)
   - At the file `00_title.tex` you can find the code for the title page.
-  - At [line 2](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L2), there is the definition of the project title, that will be used in the title page and can be retrieved anywhere in the project with the `\thetitle` command.
-  - At [line 8](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L8), there is the name of the subject (and it's subject code). In case you don't have or don't want it on the title page, you can remove lines 7 and 8 and uncomment line 11, which adds enough vertical spacing to keep the position for all other elements.
-  - At [line 25](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L25), there is the inclusion of the institution logo. The template is using `minerva.png` image file inside `./images` folder.
-  - At [line 32](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L32), there is the list of authors and their student registries and emails.
-  - At [line 46](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L46), there is the abstract element. By default it is commented.
-  - At [lines 54 and 55](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L54-L55), there is the information of place, date and semester.
+  - At [line 5](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L5), there is the name of the subject (and it's subject code). In case you don't have or don't want it on the title page, you can remove lines 7 and 8 and uncomment line 11, which adds enough vertical spacing to keep the position for all other elements.
+  - At [line 22](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L22), there is the inclusion of the institution logo. The template is using `minerva.png` image file inside `./images` folder.
+  - At [line 30](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L30), there is the list of authors and their student registries and emails.
+  - At [lines 43 to 45](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L43-L45), there is the abstract element. By default it is commented.
+  - At [lines 51 and 52](https://github.com/pedroboechat/template-latex-works/blob/main/sections/00_title.tex#L51-L52), there is the information of place, date and semester.
 - Main file (`main.tex`)
   - At the file `main.tex` you can find the main code of the project. All the packages imported in it are documented above in the [included packages](#packages) section of this README file. Some of then allow for additional configuration and are explained bellow.
   - At [line 2](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L2), there is the definition of the project's document class as `article`.
-  - At [line 5](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L5), there is the definition of the paper type, size and margin.
-  - At [line 22](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L22), there is the definition of language for `babel` package.
-  - At [lines 25 and 26](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L25-L26), there is the definition of `csquotes` styling and the outer quote auto-formatting character shortcut.
-  - At [line 29](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L29), there is the definition of `biblatex`'s bibliography and citation configuration.
-  - At [line 37](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L37), there is the PDF metadata definition with `hyperref` package.
-  - At [line 49](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L49), there is the definition of `\graphicspath` folder, which will be used as a "base path" for including graphics.
-  - At [lines 59 to 62](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L59-L62), there is the definition of `tabularx` column alignments for the `X` column type.
-  - At [lines 69 to 74](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L69-L74), there is the definition of the elements implemented with `fancyhdr` package. You can edit the pages header (`head`) and footer (`foot`) elements placed at the left (`l`), center (`c`) and right (`r`). By default, the left header element (`lhead`) has the project title and the central footer element (`cfoot`) has the page number.
-  - At [lines 92 and 93](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L92-L93), there is the overwriting of abstract's element font sizes.
-  - At [line 103](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L103), there is the import of the title page from `00_title.tex` file.
-  - At [line 106](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L106), there is creation of the table of contents by calling the `\tableofcontents` command.
-  - Between [lines 108 and 112](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L98-L102) comments, there is a place reserved for importing subfiles (e.g. `01_introduction.tex` sample section file).
-  - At [line 117](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L117), there is creation of the bibliography by calling the `\printbibliography` command, along with commands to add it to the table of contents.
-  - At [line 120](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L120), there is creation of the list of tables by calling the `\listoftables` command, along with commands to add it to the table of contents.
-  - At [line 123](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L123), there is creation of the list of figures by calling the `\listoffigures` command, along with commands to add it to the table of contents.
+  - At [line 5](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L5), there is the definition of the paper type and margin.
+  - At [line 18](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L18), there is the definition of the project title, that will be used in the title page and can be retrieved anywhere in the project with the `\thetitle` command.
+  - At [line 24](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L24), there is the definition of language for `babel` package.
+  - At [line 27](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L27), there is the definition of `biblatex`'s bibliography and citation configuration.
+  - At [lines 35 to 43](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L35-L43), there is the PDF metadata definition with `hyperref` package.
+  - At [line 47](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L47), there is the definition of `\graphicspath` folder, which will be used as a "base path" for including graphics.
+  - At [lines 56 to 60](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L56-L60), there is the definition of `tabularx` column alignments for the `X` column type.
+  - At [lines 67 to 72](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L67-L72), there is the definition of the elements implemented with `fancyhdr` package. You can edit the pages header (`head`) and footer (`foot`) elements placed at the left (`l`), center (`c`) and right (`r`). By default, the left header element (`lhead`) has the project title and the central footer element (`cfoot`) has the page number.
+  - At [lines 90 and 91](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L90-L91), there is the overwriting of abstract's element font sizes.
+  - At [lines 103 and 104](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L103-L104), there is the definition of `csquotes` styling and the outer quote auto-formatting character shortcut.
+  - At [line 111](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L111), there is the import of the title page from `00_title.tex` file.
+  - At [line 114](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L114), there is creation of the table of contents by calling the `\tableofcontents` command.
+  - At [line 117](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L117), there is creation of the list of tables by calling the `\listoftables` command, along with commands to add it to the table of contents.
+  - At [line 120](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L120), there is creation of the list of figures by calling the `\listoffigures` command, along with commands to add it to the table of contents.
+  - Between [lines 122 and 126](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L122-L126) comments, there is a place reserved for importing subfiles (e.g. `01_introduction.tex` sample section file).
+  - At [line 131](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L131), there is creation of the bibliography by calling the `\printbibliography` command, with a parameter to add it to the table of contents.
+  - At [line 139](https://github.com/pedroboechat/template-latex-works/blob/main/main.tex#L139), there is a sample import of an appendix file.

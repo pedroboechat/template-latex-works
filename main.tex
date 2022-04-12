@@ -4,7 +4,6 @@
 % Define paper size and margins
 \usepackage[
     a4paper,
-    total={6in, 8in},
     margin=1in
 ]{geometry}
 
@@ -15,15 +14,14 @@
 % Titling utilities
 \usepackage{titling}
 
+% Title of the work
+\title{Nome do Trabalho}
+
 % Allow to enumerate with redefinable labels
 \usepackage{enumerate}
 
 % Translation of some language specific commands (e.g. Abstract)
 \usepackage[portuguese]{babel}
-
-% Auto quotation formatting
-\usepackage[autostyle=false, style=american]{csquotes}
-\MakeOuterQuote{"}
 
 % Create bibliography
 \usepackage[
@@ -95,6 +93,16 @@
 % Allow to use subfiles
 \usepackage{subfiles}
 
+% Caption formatting utilities
+\usepackage{caption}
+
+% Indent first paragraph after section header
+\usepackage{indentfirst}
+
+% Auto quotation formatting
+\usepackage[autostyle=false, style=american]{csquotes}
+\MakeOuterQuote{"}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -105,6 +113,12 @@
 % Table of contents
 % \tableofcontents \clearpage
 
+% List of tables
+% \phantomsection \addcontentsline{toc}{section}{\listtablename} \listoftables \clearpage
+
+% List of figures
+% \phantomsection \addcontentsline{toc}{section}{\listfigurename} \listoffigures \clearpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subfile{./sections/01_introduction}
@@ -114,13 +128,9 @@
 \clearpage
 
 % Bibliography
-% \phantomsection \addcontentsline{toc}{section}{\bibname} \printbibliography \clearpage
+% \printbibliography[heading=bibintoc]
 
-% List of tables
-% \phantomsection \addcontentsline{toc}{section}{\listtablename} \listoftables \clearpage
-
-% List of figures
-% \phantomsection \addcontentsline{toc}{section}{\listfigurename} \listoffigures \clearpage
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
